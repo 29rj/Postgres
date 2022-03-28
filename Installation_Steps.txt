@@ -52,3 +52,7 @@ Operatin System : Ubuntu
 
 
          
+3. Linking with Jupyter
+
+    (In the MyWork.ipynb)
+    
