@@ -1,6 +1,7 @@
 Operatin System : Ubuntu
 
 1.Installing Docker:
+
     a) Uninstall already installed "Docker Files"
         sudo apt-get remove docker docker-engine docker.io
     
@@ -26,4 +27,28 @@ Operatin System : Ubuntu
     h) To check for containers in a running state, use the following command:
         sudo docker ps
 
-2.
+2. Creating Database and Importing csv file
+
+    a) Check if the docker is active or not:
+        sudo systemctl status docker
+    
+    b) Create a Postgres docker container:
+        sudo docker run --name demo -e POSTGRES_PASSWORD=password1 -d postgres
+
+    c) Connect and run some queries:
+        sudo docker exec -it demo psql -U postgres
+    
+    d) Creating Database and Table:
+
+       CREATE DATABASE db
+       \c db
+       CREATE TABLE mysocial (User_ID VARCHAR,Gender VARCHAR,Age VARCHAR,Estimation VARCHAR,Purchased VARCHAR);
+
+    e) Importing csv File:
+
+       COPY mysocial
+       FROM '/home/rishabh/Desktop/Social_Network_Ads.csv'
+       DELIMITER ',' CSV HEADER;
+
+
+         
