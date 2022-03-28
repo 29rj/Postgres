@@ -1,0 +1,29 @@
+Operatin System : Ubuntu
+
+1.Installing Docker:
+    a) Uninstall already installed "Docker Files"
+        sudo apt-get remove docker docker-engine docker.io
+    
+    b) Check if system is upto date
+         sudo apt-get update
+         sudo update
+    
+    c) Install Docker using the following command:
+        sudo apt install docker.io
+    
+    d) Install all the dependency packages using the following command:
+        sudo snap install docker
+
+    e) Check version:
+        docker --version
+
+    f) Check if the docker image has been pulled and is present in your system using the following command:
+        sudo docker images
+
+    g) To display all the containers pulled, use the following command:
+        sudo docker ps -a
+    
+    h) To check for containers in a running state, use the following command:
+        sudo docker ps
+
+2.
